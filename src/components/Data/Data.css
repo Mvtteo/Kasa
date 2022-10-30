@@ -1,0 +1,31 @@
+.square {
+  display: flex;
+  width: 27.42%;
+  aspect-ratio: 1/1;
+  border-color: #000000;
+  border: 10px;
+  opacity: 100%;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+.square img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.square .title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  width: 200px;
+  margin-top: 20%;
+  margin-left: 25px;
+  position: absolute;
+  text-shadow: #000000 1px 0 5px;
+}

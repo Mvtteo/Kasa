@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+}
+
+header {
+  height: 68px;
+  margin-top: 40px;
+  width: 1720px;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: 1024px) {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  .logo {
+    width: 210.32px;
+    height: 68px;
+    background-image: url('./pics/LOGO.png');
+    @media only screen and (max-width: 992px) {
+      width: 145px;
+      height: 47px;
+      background-size: 145px 47px;
+    }
+  }
+  nav {
+    width: 309px;
+    display: flex;
+    justify-content: space-between;
+    height: 34px;
+    margin-top: 15px;
+    @media only screen and (max-width: 992px) {
+      width: 140px;
+    }
+    .accueil {
+      display: inline;
+      width: 136px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 142.6%;
+      /* or 34px */
+
+      display: flex;
+      align-items: flex-end;
+      text-align: right;
+      text-decoration: none;
+      @media only screen and (max-width: 992px) {
+        font-size: 12px;
+        line-height: 17.11px;
+        width: 59px;
+      }
+      &:hover {
+        text-decoration-line: underline;
+      }
+
+      color: #ff6060;
+    }
+    .about {
+      width: 116px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 142.6%;
+      /* or 34px */
+
+      display: flex;
+      align-items: flex-end;
+      text-align: right;
+      text-decoration: none;
+      @media only screen and (max-width: 992px) {
+        font-size: 12px;
+        line-height: 17.11px;
+        width: 71px;
+      }
+      &:hover {
+        text-decoration-line: underline;
+      }
+
+      color: #ff6060;
+    }
+  }
+}

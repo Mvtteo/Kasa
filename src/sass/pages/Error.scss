@@ -1,0 +1,33 @@
+.error {
+  margin-bottom: 60px;
+  .img {
+    width: 597px;
+    height: 263px;
+    background-repeat: no-repeat;
+    margin-top: 179px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('./404.png');
+  }
+  p {
+    margin-top: 90px;
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    color: #ff6060;
+  }
+  .home {
+    margin-top: 182px;
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    text-decoration-line: underline;
+    color: #ff6060;
+  }
+}

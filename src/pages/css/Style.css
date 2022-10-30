@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+}
+
+html {
+  height: auto;
+}
+
+body {
+  height: auto;
+}
+
+.banner {
+  width: auto;
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 223px;
+  margin-top: 68.36px;
+  margin-left: 5.208vw;
+}
+.banner p {
+  position: relative;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 78px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 142.6%;
+  color: #ffffff;
+}
+.banner .background-dark {
+  background: #000000;
+  mix-blend-mode: darken;
+  opacity: 0.3;
+  border-radius: 25px;
+  position: absolute;
+  width: 1720px;
+  height: 223px;
+  display: inline-block;
+}
+.banner .img {
+  background-image: url(./pics_library/IMG.png);
+  background-position: 0;
+  position: absolute;
+  width: 1720px;
+  height: 223px;
+  border-radius: 25px;
+  background-position-y: 0px;
+  scale: 1;
+}
+
+#grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: auto;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+#grid::after {
+  content: "";
+  margin-left: 466.953px;
+}
+
+.greyBackground {
+  background-color: #f7f7f7;
+  border-radius: 25px;
+  margin-left: 5.208vw;
+  top: 437px;
+  width: auto;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
