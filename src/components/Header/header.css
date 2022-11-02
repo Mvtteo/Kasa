@@ -5,24 +5,36 @@ body {
 header {
   height: 68px;
   margin-top: 40px;
-  width: 1720px;
+  width: auto;
   margin-left: 100px;
   margin-right: 100px;
   display: flex;
   justify-content: space-between;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
   header {
-    width: auto;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 2560px) and (max-width: 3480px) {
+  header {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
 header .logo {
   width: 210.32px;
   height: 68px;
-  background-image: url('./pics/LOGO.png');
+  background-image: url("./pics/LOGO.png");
 }
 @media only screen and (max-width: 992px) {
   header .logo {
@@ -36,22 +48,26 @@ header nav {
   display: flex;
   justify-content: space-between;
   height: 34px;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 @media only screen and (max-width: 992px) {
   header nav {
-    width: 140px;
+    width: 130px;
+  }
+}
+@media only screen and (min-width: 2560px) and (max-width: 3480px) {
+  header nav {
+    width: 350px;
   }
 }
 header nav .accueil {
   display: inline;
   width: 136px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 142.6%;
-  /* or 34px */
   display: flex;
   align-items: flex-end;
   text-align: right;
@@ -65,17 +81,22 @@ header nav .accueil {
     width: 59px;
   }
 }
+@media only screen and (min-width: 2560px) and (max-width: 3480px) {
+  header nav .accueil {
+    font-size: 30px;
+    line-height: 100%;
+  }
+}
 header nav .accueil:hover {
   text-decoration-line: underline;
 }
 header nav .about {
   width: 116px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 142.6%;
-  /* or 34px */
   display: flex;
   align-items: flex-end;
   text-align: right;
@@ -87,6 +108,13 @@ header nav .about {
     font-size: 12px;
     line-height: 17.11px;
     width: 71px;
+  }
+}
+@media only screen and (min-width: 2560px) and (max-width: 3480px) {
+  header nav .about {
+    font-size: 30px;
+    width: 150px;
+    line-height: 100%;
   }
 }
 header nav .about:hover {

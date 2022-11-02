@@ -30,6 +30,9 @@ const Panel = styled.div`
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     min-height: 40px;
   }
+  @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    width: 47%;
+  }
 `
 
 const PanelHeading = styled.div`
@@ -79,26 +82,22 @@ const ToggleButtonWrapper = styled.div`
 const PanelContent = styled.div`
   color: #000000;
   overflow: hidden;
-  width: 750px;
+  width: 100%;
   background: #f7f7f7;
   border-radius: 10px;
   margin-top: -10px;
   height: ${(props) => (props.isCollapsed ? 0 : '250px')};
   @media screen and (min-width: 1921px) and (max-width: 2999px) {
-    width: 39.063vw;
     height: ${(props) => (props.isCollapsed ? 0 : '330px')};
   }
   @media screen and (min-width: 3000px) {
-    width: 39.063vw;
     height: ${(props) => (props.isCollapsed ? 0 : '400px')};
   }
   @media only screen and (max-width: 768px) {
     height: ${(props) => (props.isCollapsed ? 0 : '143.32px')};
-    width: auto;
   }
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     height: ${(props) => (props.isCollapsed ? 0 : '220px')};
-    width: auto;
   }
 `
 
@@ -111,7 +110,7 @@ const PanelContentInner = styled.div`
   color: #ff6060;
   padding-top: 35px;
   padding-left: 20px;
-  width: 700px;
+  width: 91.4%;
   @media screen and (min-width: 1921px) and (max-width: 2999px) {
     font-size: 30px;
     width: 38vw;
@@ -130,6 +129,9 @@ const PanelContentInner = styled.div`
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     font-size: 16px;
     padding-top: 25px;
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1075px) {
+    font-size: 16px;
   }
 `
 

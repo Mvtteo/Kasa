@@ -6,7 +6,7 @@ footer {
   flex-direction: column;
 }
 footer .logo {
-  background: url("./img/logo_w.png");
+  background: url('./img/logo_w.png');
   width: 122px;
   height: 39.44px;
   margin-left: auto;
@@ -16,12 +16,14 @@ footer .logo {
 footer .arr {
   color: white;
   text-align: center;
-  margin-top: 28.56px;
-  font-family: "Montserrat";
+  margin-top: 31.67px;
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 142.6%;
+  margin-bottom: 29px;
+  height: 46px;
 }
 @media only screen and (max-width: 992px) {
   footer .arr {

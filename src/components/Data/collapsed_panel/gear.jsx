@@ -31,6 +31,9 @@ const Panel = styled.div`
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     min-height: 40px;
   }
+  @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    width: 47%;
+  }
 `
 
 const PanelHeading = styled.div`
@@ -100,6 +103,9 @@ const PanelContent = styled.div`
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     height: ${(props) => (props.isCollapsed ? 0 : '220px')};
     width: auto;
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    width: 100%;
   }
 `
 

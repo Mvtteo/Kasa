@@ -13,7 +13,6 @@ function Home() {
     (
       <html lang="fr">
         <head>
-          <meta charset="utf-8" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, viewport-fit=cover"
@@ -22,12 +21,12 @@ function Home() {
         </head>
         <body>
           <div className="banner">
-            <div className="background">
-              <div className="img"></div>
-              <div className="background-dark"></div>
-              <p>Chez vous, partout et ailleurs</p>
-              <div className="background-light"></div>
-            </div>
+            <div className="img"></div>
+            <div className="background-dark"></div>
+            <p>
+              {/* <span>Chez vous,</span> partout et ailleurs */}
+              Chez vous, partout et ailleurs
+            </p>
           </div>
           {/* grid */}
           <div className="greyBackground">

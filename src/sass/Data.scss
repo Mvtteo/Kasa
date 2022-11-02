@@ -1,18 +1,30 @@
+@import './abstracts/variables';
+
 .square {
   display: flex;
   width: 27.42%;
   aspect-ratio: 1 / 1;
-  background-color: red;
   border-color: #000000;
-  border: 10px;
   opacity: 100%;
   margin-bottom: 50px;
   border-radius: 10px;
+  @media only screen and (min-width: 2560px) and (max-width: 3480px) {
+    border-radius: 20px;
+    margin-bottom: 100px;
+  }
+  @media only screen and (max-width: 1023px) {
+    width: 100%;
+    margin-bottom: 22px;
+    aspect-ratio: 46 / 35;
+  }
   img {
     height: auto;
     max-width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    @media only screen and (min-width: 2560px) and (max-width: 3480px) {
+      border-radius: 20px;
+    }
   }
   .title {
     font-family: 'Montserrat';
@@ -24,9 +36,39 @@
     display: flex;
     align-items: flex-end;
     width: 200px;
-    margin-top: 20%;
+    margin-top: 18%;
     margin-left: 25px;
     position: absolute;
     text-shadow: #000000 1px 0 5px;
+    @media only screen and (min-width: 2560px) and (max-width: 3480px) {
+      font-size: 40px;
+      width: 500px;
+    }
+    @media only screen and (max-width: 768px) {
+      margin-top: 50%;
+      width: 80%;
+      margin-left: 20px;
+    }
+    @media only screen and (min-width: 400px) and (max-width: 768px) {
+      margin-top: 55%;
+    }
+    @media only screen and (min-width: 570px) and (max-width: 768px) {
+      margin-top: 62%;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 1023px) {
+      width: 80%;
+      margin-top: 53%;
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+      margin-left: 20px;
+      margin-top: 15%;
+    }
+    @media only screen and (min-width: 1200px) and (max-width: 1439px) {
+      margin-top: 17%;
+    }
+    @media only screen and (min-width: 1441px) and (max-width: 1700px) {
+      margin-top: 16%;
+      margin-left: 10px;
+    }
   }
 }

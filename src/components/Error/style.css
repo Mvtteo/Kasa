@@ -1,5 +1,6 @@
 .error {
   margin-bottom: 60px;
+  flex-grow: 1;
 }
 .error .img {
   width: 597px;
@@ -9,6 +10,21 @@
   margin-left: auto;
   margin-right: auto;
   background-image: url("./404.png");
+}
+@media only screen and (min-width: 2560px) and (max-width: 3480px) {
+  .error .img {
+    width: 1080px;
+    height: 476px;
+    background-size: contain;
+    margin-top: 400px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .error .img {
+    width: 198px;
+    height: 99px;
+    background-image: url("../../sass/images/404-mini.png");
+  }
 }
 .error p {
   margin-top: 90px;
@@ -20,6 +36,28 @@
   font-size: 36px;
   color: #ff6060;
 }
+.error p br {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .error p {
+    font-size: 18px;
+    margin: 0;
+    max-width: 260px;
+    text-align: center;
+    line-height: 142.6%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .error p br {
+    display: block;
+  }
+}
+@media only screen and (min-width: 2560px) and (max-width: 3480px) {
+  .error p {
+    font-size: 50px;
+  }
+}
 .error .home {
   margin-top: 182px;
   display: block;
@@ -30,4 +68,14 @@
   font-size: 18px;
   text-decoration-line: underline;
   color: #ff6060;
+}
+@media only screen and (min-width: 2560px) and (max-width: 3480px) {
+  .error .home {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .error .home {
+    font-size: 14px;
+  }
 }

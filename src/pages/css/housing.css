@@ -1,32 +1,53 @@
-#root {
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+}
+html body #root {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
-#root .body {
+html body #root .body {
   flex-grow: 1;
 }
-#root .body .carousel {
+html body #root .body .carousel {
   width: auto;
   height: 415px;
   margin-left: 100px;
   margin-top: 25px;
   margin-right: 100px;
 }
-@media only screen and (max-width: 992px) {
-  #root .body .carousel {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 27px;
+@media only screen and (max-width: 1024px) {
+  html body #root .body .carousel {
     height: 255px;
   }
 }
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  html body #root .body .carousel {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  #root .body .carousel {
+  html body #root .body .carousel {
     margin-left: 40px;
     margin-right: 40px;
   }
 }
-#root .body .carousel .index {
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  html body #root .body .carousel {
+    height: 275px;
+  }
+}
+@media only screen and (min-width: 2560px) and (max-width: 3480px) {
+  html body #root .body .carousel {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+html body #root .body .carousel .index {
   position: absolute;
   left: 48.95%;
   right: 49.11%;
@@ -42,12 +63,12 @@
   text-align: center;
   color: #ffffff;
 }
-@media screen and (max-width: 1919px) {
-  #root .body .carousel .index {
+@media screen and (max-width: 1023px) {
+  html body #root .body .carousel .index {
     opacity: 0;
   }
 }
-#root .body .arrowleft {
+html body #root .body .arrowleft {
   background: url(./pics_library/arrowleft.png);
   position: absolute;
   left: 47px;
@@ -56,8 +77,8 @@
   width: 46.6800041199px;
   cursor: pointer;
 }
-@media only screen and (max-width: 1024px) {
-  #root .body .arrowleft {
+@media only screen and (max-width: 1023px) {
+  html body #root .body .arrowleft {
     height: 19.8px;
     width: 11.67px;
     top: 0;
@@ -67,7 +88,17 @@
     background: url(./pics_library/arrowleft-mini.png);
   }
 }
-#root .body .arrowright {
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  html body #root .body .arrowleft {
+    top: 0px;
+    margin-top: 100px;
+    left: 15px;
+    background: url(./pics_library/arrowleft-mid.png);
+    height: 60px;
+    width: 36px;
+  }
+}
+html body #root .body .arrowright {
   background: url(./pics_library/arrowright.png);
   position: absolute;
   right: 32px;
@@ -76,8 +107,8 @@
   width: 46.6800041199px;
   cursor: pointer;
 }
-@media only screen and (max-width: 1024px) {
-  #root .body .arrowright {
+@media only screen and (max-width: 1023px) {
+  html body #root .body .arrowright {
     height: 19.8px;
     width: 11.67px;
     top: 0;
@@ -87,42 +118,58 @@
     background: url(./pics_library/arrowright-mini.png);
   }
 }
-#root .body .page {
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  html body #root .body .arrowright {
+    top: 0px;
+    margin-top: 100px;
+    right: 15px;
+    background: url(./pics_library/arrowright-mid.png);
+    height: 60px;
+    width: 36px;
+  }
+}
+html body #root .body .page {
   display: flex;
   flex-direction: column;
-  width: 1720px;
-  margin-left: auto;
-  margin-right: auto;
+  width: auto;
+  margin-left: 100px;
+  margin-right: 100px;
   margin-top: 30px;
   justify-content: space-between;
 }
 @media only screen and (max-width: 1024px) {
-  #root .body .page {
+  html body #root .body .page {
     width: auto;
     margin-left: 20px;
     margin-right: 20px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  #root .body .page {
+  html body #root .body .page {
     margin-left: 40px;
     margin-right: 40px;
   }
 }
-#root .body .page .topside {
+@media only screen and (min-width: 2560px) and (max-width: 3480px) {
+  html body #root .body .page {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+html body #root .body .page .topside {
   display: flex;
   justify-content: space-between;
 }
 @media only screen and (max-width: 1024px) {
-  #root .body .page .topside {
+  html body #root .body .page .topside {
     flex-direction: column;
   }
 }
-#root .body .page .topside .head {
+html body #root .body .page .topside .head {
   display: flex;
   flex-direction: column;
 }
-#root .body .page .topside .head h1 {
+html body #root .body .page .topside .head h1 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 900;
@@ -131,23 +178,23 @@
   color: #ff6060;
 }
 @media screen and (min-width: 1921px) {
-  #root .body .page .topside .head h1 {
+  html body #root .body .page .topside .head h1 {
     font-size: 1.302vw;
   }
 }
 @media only screen and (max-width: 768px) {
-  #root .body .page .topside .head h1 {
+  html body #root .body .page .topside .head h1 {
     font-size: 18px;
     line-height: 25.67px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  #root .body .page .topside .head h1 {
+  html body #root .body .page .topside .head h1 {
     font-size: 20px;
     line-height: 27px;
   }
 }
-#root .body .page .topside .head h2 {
+html body #root .body .page .topside .head h2 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 900;
@@ -156,32 +203,32 @@
   color: #ff6060;
 }
 @media screen and (min-width: 1921px) {
-  #root .body .page .topside .head h2 {
+  html body #root .body .page .topside .head h2 {
     font-size: 0.833vw;
   }
 }
 @media only screen and (max-width: 768px) {
-  #root .body .page .topside .head h2 {
+  html body #root .body .page .topside .head h2 {
     font-size: 14px;
     margin-top: 5px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  #root .body .page .topside .head h2 {
+  html body #root .body .page .topside .head h2 {
     font-size: 16px;
     margin-top: 3px;
   }
 }
-#root .body .page .topside .head .tags {
+html body #root .body .page .topside .head .tags {
   display: flex;
   margin-top: 20px;
 }
 @media only screen and (max-width: 1024px) {
-  #root .body .page .topside .head .tags {
+  html body #root .body .page .topside .head .tags {
     margin-top: 10px;
   }
 }
-#root .body .page .topside .head .tags .tag {
+html body #root .body .page .topside .head .tags .tag {
   background: #ff6060;
   border-radius: 10px;
   width: 115px;
@@ -195,48 +242,49 @@
   color: #ffffff;
 }
 @media screen and (min-width: 1921px) {
-  #root .body .page .topside .head .tags .tag {
+  html body #root .body .page .topside .head .tags .tag {
     width: 5.99vw;
     height: 1.302vw;
     font-size: 0.729vw;
   }
 }
 @media only screen and (max-width: 768px) {
-  #root .body .page .topside .head .tags .tag {
+  html body #root .body .page .topside .head .tags .tag {
     font-size: 10px;
     width: 84px;
     height: 18px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  #root .body .page .topside .head .tags .tag {
+  html body #root .body .page .topside .head .tags .tag {
     font-size: 12px;
-    width: 110px;
+    width: 120px;
+    height: 23px;
   }
 }
-#root .body .page .topside .head .tags .tag + .tag {
+html body #root .body .page .topside .head .tags .tag + .tag {
   margin-left: 10px;
 }
 @media screen and (min-width: 1921px) {
-  #root .body .page .topside .head .tags .tag + .tag {
+  html body #root .body .page .topside .head .tags .tag + .tag {
     margin-left: 20px;
   }
 }
-#root .body .page .topside .rightside {
+html body #root .body .page .topside .rightside {
   display: flex;
   flex-direction: column;
 }
-#root .body .page .topside .rightside .host {
+html body #root .body .page .topside .rightside .host {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 @media only screen and (max-width: 992px) {
-  #root .body .page .topside .rightside .host {
+  html body #root .body .page .topside .rightside .host {
     margin-top: 16px;
   }
 }
-#root .body .page .topside .rightside .host .name {
+html body #root .body .page .topside .rightside .host .name {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 900;
@@ -251,64 +299,69 @@
   word-spacing: 99rem;
 }
 @media screen and (min-width: 1921px) {
-  #root .body .page .topside .rightside .host .name {
+  html body #root .body .page .topside .rightside .host .name {
     font-size: 34px;
   }
 }
 @media only screen and (max-width: 768px) {
-  #root .body .page .topside .rightside .host .name {
+  html body #root .body .page .topside .rightside .host .name {
     font-size: 12px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  #root .body .page .topside .rightside .host .name {
+  html body #root .body .page .topside .rightside .host .name {
     font-size: 14px;
   }
 }
-#root .body .page .topside .rightside .host img {
+html body #root .body .page .topside .rightside .host img {
   border-radius: 100px;
   height: 64px;
 }
 @media screen and (min-width: 1921px) {
-  #root .body .page .topside .rightside .host img {
+  html body #root .body .page .topside .rightside .host img {
     height: 128px;
   }
 }
 @media only screen and (max-width: 768px) {
-  #root .body .page .topside .rightside .host img {
+  html body #root .body .page .topside .rightside .host img {
     height: 32px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  #root .body .page .topside .rightside .host img {
+  html body #root .body .page .topside .rightside .host img {
     height: 50px;
   }
 }
-#root .body .page .topside .rightside .rating {
+html body #root .body .page .topside .rightside .rating {
   display: flex;
   margin-top: 24px;
   width: 196px;
   justify-content: space-between;
 }
-#root .body .page .topside .rightside .rating i {
+html body #root .body .page .topside .rightside .rating i {
   color: #ff6060;
   font-size: 26.66px;
 }
-#root .body .page .topside .rightside .rating .grey {
+html body #root .body .page .topside .rightside .rating .grey {
   color: lightgrey;
 }
-#root .body .page .more {
+html body #root .body .page .more {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: 160px;
 }
-@media only screen and (max-width: 1024px) {
-  #root .body .page .more {
+@media only screen and (max-width: 1023px) {
+  html body #root .body .page .more {
     flex-direction: column;
     margin-bottom: 60.5px;
   }
 }
-#root .body .page .more p {
+@media only screen and (min-width: 2560px) and (max-width: 3480px) {
+  html body #root .body .page .more {
+    margin-bottom: 400px;
+  }
+}
+html body #root .body .page .more p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 900;
@@ -320,19 +373,19 @@
   color: #ffffff;
 }
 @media screen and (min-width: 1921px) {
-  #root .body .page .more p {
+  html body #root .body .page .more p {
     font-size: 45px;
   }
 }
 @media only screen and (max-width: 1024px) {
-  #root .body .page .more p {
+  html body #root .body .page .more p {
     font-size: 13px;
     margin-left: 11.51px;
     padding: 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  #root .body .page .more p {
+  html body #root .body .page .more p {
     font-size: 15px;
   }
 }

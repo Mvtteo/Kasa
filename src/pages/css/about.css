@@ -1,23 +1,87 @@
 #topimg {
   margin-top: 44px;
+  margin-bottom: 30px;
 }
 #topimg .img {
-  width: 1720px;
+  width: auto;
   height: 223px;
   margin-left: 100px;
+  margin-right: 100px;
   background-image: url("./pics_library/kalen-emsley.jpg");
+  background-position-y: 1875px;
   border-radius: 25px;
+  background-size: cover;
+}
+@media only screen and (max-width: 768px) {
+  #topimg .img {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #topimg .img {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #topimg .img {
+    margin-bottom: 20px;
+    background-position-y: 0px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1150px) {
+  #topimg .img {
+    background-position-y: 400px;
+  }
+}
+@media only screen and (min-width: 1430px) and (max-width: 1920px) {
+  #topimg .img {
+    background-position-y: 600px;
+  }
+}
+@media only screen and (min-width: 2560px) and (max-width: 3480px) {
+  #topimg .img {
+    margin-left: 150px;
+    margin-right: 150px;
+    background-position-y: 1200px;
+  }
 }
 #topimg .darken {
   background: #000000;
   mix-blend-mode: darken;
   opacity: 0.3;
   border-radius: 25px;
-  width: 1720px;
+  width: auto;
   height: 223px;
-  margin-left: 100px;
+  left: 100px;
+  right: 100px;
   position: absolute;
   margin-top: -223px;
+}
+@media only screen and (max-width: 768px) {
+  #topimg .darken {
+    left: 20px;
+    right: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #topimg .darken {
+    left: 40px;
+    right: 40px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #topimg .darken {
+    margin-top: -243px;
+  }
+}
+@media only screen and (min-width: 2560px) and (max-width: 3480px) {
+  #topimg .darken {
+    left: 150px;
+    right: 150px;
+  }
 }
 
 p {
@@ -31,7 +95,12 @@ p {
   align-items: center;
   color: #ffffff;
 }
+@media only screen and (max-width: 1024px) {
+  p {
+    font-size: 13px;
+  }
+}
 
 #page {
-  margin-bottom: -3650px;
+  flex-grow: 1;
 }
