@@ -1,5 +1,7 @@
 import './data.json'
 import ImageSlider from './ImageSlider'
+// import { housing } from '../Data/Import'
+// import { useState, useEffect } from 'react'
 
 let data = require('./data.json')
 

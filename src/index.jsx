@@ -7,7 +7,7 @@ import About from './pages/About'
 import Header from './components/Header/Index'
 import Index from './components/Data/index'
 import Footer from './components/Footer/Index'
-import Grab from './components/Data/Import'
+import Test from './components/Data/test'
 
 const container = document.getElementById('root')
 const root = createRoot(container)
@@ -21,6 +21,7 @@ root.render(
       <Route path="/index" element={<Index />}></Route>
       <Route path="/apropos" element={<About />}></Route>
       <Route path="*" element={<Error />}></Route>
+      <Route path="/test" element={<Test />}></Route>
     </Routes>
     <Footer />
   </BrowserRouter>
