@@ -1,25 +1,23 @@
-import './data.json'
 import ImageSlider from './ImageSlider'
-// import { housing } from '../Data/Import'
-// import { useState, useEffect } from 'react'
+import { useFetch } from '../../utils/hooks/Hook'
 
-let data = require('./data.json')
+const Slider = () => {
+  //importation des données
+  const { isLoading, data, error } = useFetch(`data.json`)
 
-var url_string = window.location.href
-var url = new URL(url_string)
-var paramValue = url.searchParams.get('logement')
-
-const logement = paramValue
-
-const housing = data.find((housing) => housing.id === logement)
-
-const Test = () => {
-  const slides = housing.pictures
+  if (isLoading) {
+    return <h1>Chargement en cours</h1>
+  }
+  if (error) {
+    return <h1>Oups! Une erreur est survenue</h1>
+  }
+  const slides = data.pictures
   return (
     <div className="carousel">
+      {/* importation du slider */}
       <ImageSlider slides={slides} />
     </div>
   )
 }
 
-export default Test
+export default Slider

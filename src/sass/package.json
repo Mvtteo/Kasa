@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --no-source-map --watch ./pages/About.scss:../pages/css/about.css"
+    "sass": "sass --no-source-map --watch ./pages/housing.scss:../pages/css/housing.css"
   },
   "author": "",
   "license": "ISC"

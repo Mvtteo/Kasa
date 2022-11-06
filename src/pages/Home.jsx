@@ -1,31 +1,22 @@
 import './css/Style.css'
-import React, { useEffect } from 'react'
-import Index from '../components/Data/index'
+import React from 'react'
+import Index from '../components/Cards/index'
 
-function Title() {
-  useEffect(() => {
-    document.title = 'Kasa, locations immobilières'
-  })
-}
+//fonction d'affichage de l'écran d'accueil
 function Home() {
   return (
-    Title(),
-    (
-      <div className="el">
-        <div className="banner">
-          <div className="img"></div>
-          <div className="background-dark"></div>
-          <p>
-            {/* <span>Chez vous,</span> partout et ailleurs */}
-            Chez vous, partout et ailleurs
-          </p>
-        </div>
-        {/* grid */}
-        <div className="greyBackground">
-          <Index />
-        </div>
+    <div className="el">
+      {/* affichage de la banniere située en haut du site */}
+      <div className="banner">
+        <div className="img"></div>
+        <div className="background-dark"></div>
+        <p>Chez vous, partout et ailleurs</p>
       </div>
-    )
+      <div className="greyBackground">
+        {/* importation de la map des propriétés */}
+        <Index />
+      </div>
+    </div>
   )
 }
 

@@ -1,11 +1,13 @@
 import './css/housing.css'
-import Test from '../components/Slider/Slider'
-import HousingDisplay from '../components/Data/logement'
+import Slider from '../components/Slider/Slider'
+import HousingDisplay from '../components/Housing/logement'
 
 function Housing() {
   return (
     <div className="body">
-      <Test />
+      {/* importation du slider d'images et de la fonction permettant
+      la page de la location */}
+      <Slider />
       <HousingDisplay />
     </div>
   )

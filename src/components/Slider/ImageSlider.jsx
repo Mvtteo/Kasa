@@ -13,6 +13,7 @@ const sliderStyles = {
   height: '100%',
 }
 
+//définition du comportement du slider
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const goToPrevious = () => {
@@ -33,11 +34,13 @@ const ImageSlider = ({ slides }) => {
   return (
     <div style={sliderStyles}>
       <div>
+        {/* application du comportement des flèches */}
         <div onClick={goToPrevious} className="arrowleft"></div>
         <div onClick={goToNext} className="arrowright"></div>
       </div>
       <div style={slideStylesWidthBackground}></div>
       <div className="index">
+        {/* affichage de l'indicateur de slide actuelle */}
         {currentIndex + 1}/{slides.length}
       </div>
     </div>

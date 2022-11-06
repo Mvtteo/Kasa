@@ -1,10 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import './arrows/arrowtop.png'
-import './arrows/arrowtop-mini.png'
 
-let arrowtop = require('./arrows/arrowtop.png')
-let arrowtopmini = require('./arrows/arrowtop-mini.png')
+let arrowtop = require('../../sass/images/arrows/arrowtop.png')
+let arrowtopmini = require('../../sass/images/arrows/arrowtop-mini.png')
 
 const Panel = styled.div`
   width: auto;

@@ -69,7 +69,7 @@ html body #root .body .carousel .index {
   }
 }
 html body #root .body .arrowleft {
-  background: url(./pics_library/arrowleft.png);
+  background: url(../../sass/images/arrows/leftarrow.png);
   position: absolute;
   left: 47px;
   top: 145px;
@@ -85,7 +85,7 @@ html body #root .body .arrowleft {
     margin-top: 118px;
     margin-left: 5.84px;
     left: 0;
-    background: url(./pics_library/arrowleft-mini.png);
+    background: url(../../sass/images/arrows/arrowleft-mini.png);
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
@@ -93,13 +93,13 @@ html body #root .body .arrowleft {
     top: 0px;
     margin-top: 100px;
     left: 15px;
-    background: url(./pics_library/arrowleft-mid.png);
+    background: url(../../sass/images/arrows/arrowleft-mid.png);
     height: 60px;
     width: 36px;
   }
 }
 html body #root .body .arrowright {
-  background: url(./pics_library/arrowright.png);
+  background: url(../../sass/images/arrows/arrowright.png);
   position: absolute;
   right: 32px;
   top: 145px;
@@ -115,7 +115,7 @@ html body #root .body .arrowright {
     margin-top: 118px;
     margin-right: 5.84px;
     right: 0;
-    background: url(./pics_library/arrowright-mini.png);
+    background: url(../../sass/images/arrows/arrowright-mini.png);
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
@@ -123,7 +123,7 @@ html body #root .body .arrowright {
     top: 0px;
     margin-top: 100px;
     right: 15px;
-    background: url(./pics_library/arrowright-mid.png);
+    background: url(../../sass/images/arrows/arrowright-mid.png);
     height: 60px;
     width: 36px;
   }
@@ -274,6 +274,12 @@ html body #root .body .page .topside .rightside {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (max-width: 1024px) {
+  html body #root .body .page .topside .rightside {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
 html body #root .body .page .topside .rightside .host {
   display: flex;
   align-items: center;
@@ -301,6 +307,7 @@ html body #root .body .page .topside .rightside .host .name {
 @media screen and (min-width: 1921px) {
   html body #root .body .page .topside .rightside .host .name {
     font-size: 34px;
+    margin-right: 50px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -338,9 +345,19 @@ html body #root .body .page .topside .rightside .rating {
   width: 196px;
   justify-content: space-between;
 }
+@media only screen and (max-width: 1024px) {
+  html body #root .body .page .topside .rightside .rating {
+    width: 98px;
+  }
+}
 html body #root .body .page .topside .rightside .rating i {
   color: #ff6060;
   font-size: 26.66px;
+}
+@media only screen and (max-width: 1024px) {
+  html body #root .body .page .topside .rightside .rating i {
+    font-size: 15px;
+  }
 }
 html body #root .body .page .topside .rightside .rating .grey {
   color: lightgrey;

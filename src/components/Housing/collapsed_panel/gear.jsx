@@ -1,20 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import '../data.json'
-import './arrows/arrowtop.png'
-import './arrows/arrowtop-mini.png'
+import { useFetch } from '../../../utils/hooks/Hook'
 
-let arrowtop = require('./arrows/arrowtop.png')
-let arrowtopmini = require('./arrows/arrowtop-mini.png')
-let data = require('../data.json')
-
-var url_string = window.location.href
-var url = new URL(url_string)
-var paramValue = url.searchParams.get('logement')
-
-const logement = paramValue
-
-const housing = data.find((housing) => housing.id === logement)
+let arrowtop = require('../../../sass/images/arrows/arrowtop.png')
+let arrowtopmini = require('../../../sass/images/arrows/arrowtop-mini.png')
 
 const Panel = styled.div`
   width: 750px;
@@ -187,10 +176,20 @@ const ArrowTop = styled.div`
 `
 
 const Gear = () => {
+  //définition des 2 états différents du dropdown
   const [isCollapsed, setIsCollapsed] = React.useState(true)
 
   const togglePanel = () => {
     setIsCollapsed((prevState) => !prevState)
+  }
+  //importation des données
+  const { isLoading, data, error } = useFetch(`data.json`)
+
+  if (isLoading) {
+    return <h1>Chargement en cours</h1>
+  }
+  if (error) {
+    return <h1>Oups! Une erreur est survenue</h1>
   }
 
   return (
@@ -203,7 +202,7 @@ const Gear = () => {
       </PanelHeading>
       <PanelContent isCollapsed={isCollapsed}>
         <PanelContentInner>
-          {housing.equipments.map((gear) => {
+          {data.equipments.map((gear) => {
             return <Stuff key={gear.toString()}>{gear}</Stuff>
           })}
         </PanelContentInner>

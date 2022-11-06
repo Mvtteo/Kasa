@@ -34,7 +34,7 @@ header {
 header .logo {
   width: 210.32px;
   height: 68px;
-  background-image: url("./pics/LOGO.png");
+  background-image: url('./../../sass/images/LOGO.png');
 }
 @media only screen and (max-width: 992px) {
   header .logo {
@@ -63,7 +63,7 @@ header nav {
 header nav .accueil {
   display: inline;
   width: 136px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
@@ -92,7 +92,7 @@ header nav .accueil:hover {
 }
 header nav .about {
   width: 116px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 900;
   font-size: 24px;

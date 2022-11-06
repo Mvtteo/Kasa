@@ -56,7 +56,7 @@ html {
         }
 
         .arrowleft {
-          background: url(./pics_library/arrowleft.png);
+          background: url(../../sass/images/arrows/leftarrow.png);
           position: absolute;
           left: 47px;
           top: 145px;
@@ -70,19 +70,19 @@ html {
             margin-top: 118px;
             margin-left: 5.84px;
             left: 0;
-            background: url(./pics_library/arrowleft-mini.png);
+            background: url(../../sass/images/arrows/arrowleft-mini.png);
           }
           @media only screen and (min-width: 1024px) and (max-width: 1440px) {
             top: 0px;
             margin-top: 100px;
             left: 15px;
-            background: url(./pics_library/arrowleft-mid.png);
+            background: url(../../sass/images/arrows/arrowleft-mid.png);
             height: 60px;
             width: 36px;
           }
         }
         .arrowright {
-          background: url(./pics_library/arrowright.png);
+          background: url(../../sass/images/arrows/arrowright.png);
           position: absolute;
           right: 32px;
           top: 145px;
@@ -96,13 +96,13 @@ html {
             margin-top: 118px;
             margin-right: 5.84px;
             right: 0;
-            background: url(./pics_library/arrowright-mini.png);
+            background: url(../../sass/images/arrows/arrowright-mini.png);
           }
           @media only screen and (min-width: 1024px) and (max-width: 1440px) {
             top: 0px;
             margin-top: 100px;
             right: 15px;
-            background: url(./pics_library/arrowright-mid.png);
+            background: url(../../sass/images/arrows/arrowright-mid.png);
             height: 60px;
             width: 36px;
           }
@@ -221,6 +221,10 @@ html {
             .rightside {
               display: flex;
               flex-direction: column;
+              @media only screen and (max-width: 1024px) {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+              }
               .host {
                 display: flex;
                 align-items: center;
@@ -243,6 +247,7 @@ html {
                   word-spacing: 99rem;
                   @media screen and (min-width: 1921px) {
                     font-size: 34px;
+                    margin-right: 50px;
                   }
                   @media only screen and (max-width: 768px) {
                     font-size: 12px;
@@ -270,9 +275,15 @@ html {
                 margin-top: 24px;
                 width: 196px;
                 justify-content: space-between;
+                @media only screen and (max-width: 1024px) {
+                  width: 98px;
+                }
                 i {
                   color: #ff6060;
                   font-size: 26.66px;
+                  @media only screen and (max-width: 1024px) {
+                    font-size: 15px;
+                  }
                 }
                 .grey {
                   color: lightgrey;

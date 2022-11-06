@@ -9,7 +9,7 @@
   margin-top: 179px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("./404.png");
+  background-image: url("../../sass/images/404.png");
 }
 @media only screen and (min-width: 2560px) and (max-width: 3480px) {
   .error .img {

@@ -1,20 +1,19 @@
 import React from 'react'
-// import grab from './Import'
-// import { housing } from './Import'
-// import { useFetch } from './Import'
+import { useFetch } from '../../utils/hooks/Hook'
 
 function RatingScript() {
-  let data = require('./data.json')
-  var url_string = window.location.href
-  var url = new URL(url_string)
-  var paramValue = url.searchParams.get('logement')
-  const logement = paramValue
-  // const housing = data.find((housing) => housing.id === logement)
-  // grab()
-  const housing = data.find((housing) => housing.id === logement)
-  // const { data, isLoading } = useFetch(`./data.json`)
-  // const { housing } = data
-  if (housing.rating === '1') {
+  //importation des données
+  const { isLoading, data, error } = useFetch(`data.json`)
+
+  if (isLoading) {
+    return <h1>Chargement en cours</h1>
+  }
+  if (error) {
+    return <h1>Oups! Une erreur est survenue</h1>
+  }
+  // définition du nombre d'étoiles de la location en fonction des données
+  // reçues, de 1 à 5
+  if (data.rating === '1') {
     return (
       <div className="rating">
         <i className="fa-solid fa-star"></i>
@@ -25,7 +24,7 @@ function RatingScript() {
       </div>
     )
   }
-  if (housing.rating === '2') {
+  if (data.rating === '2') {
     return (
       <div className="rating">
         <i className="fa-solid fa-star"></i>
@@ -36,7 +35,7 @@ function RatingScript() {
       </div>
     )
   }
-  if (housing.rating === '3') {
+  if (data.rating === '3') {
     return (
       <div className="rating">
         <i className="fa-solid fa-star"></i>
@@ -47,7 +46,7 @@ function RatingScript() {
       </div>
     )
   }
-  if (housing.rating === '4') {
+  if (data.rating === '4') {
     return (
       <div className="rating">
         <i className="fa-solid fa-star"></i>
@@ -58,7 +57,7 @@ function RatingScript() {
       </div>
     )
   }
-  if (housing.rating === '5') {
+  if (data.rating === '5') {
     return (
       <div className="rating">
         <i className="fa-solid fa-star"></i>

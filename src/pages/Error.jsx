@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import './style.css'
+import './css/Error.css'
 
 function Error() {
   return (
@@ -9,6 +9,7 @@ function Error() {
         Oups! La page que <br />
         vous demandez n'existe pas.
       </p>
+      {/* lien de redirection vers la page d'accueil */}
       <Link className="home" to="/">
         Retourner sur la page d'accueil
       </Link>
