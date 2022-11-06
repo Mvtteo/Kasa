@@ -1,34 +1,33 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
-function Test() {
-  const [data, setData] = useState([])
-  const getData = () => {
-    fetch('data.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    })
-      .then(function (response) {
-        console.log(response)
-        return response.json()
-      })
-      .then(function (myJson) {
-        console.log(myJson)
-        setData(myJson)
+export function useFetch(url) {
+  const [data, setData] = useState({})
+
+  const [error, setError] = useState(false)
+
+  useEffect(() => {
+    async function fetchData() {
+      console.log()
+      try {
+        const response = await fetch(url)
+        console.log('hello')
+
+        const fullData = await response.json()
 
         let url_string = window.location.href
-        let url = new URL(url_string)
-        let paramValue = url.searchParams.get('logement')
-        let housing = myJson.find((data) => data.id === paramValue)
-        console.log(housing)
-      })
-  }
-  useEffect(() => {
-    getData()
-  }, [])
-}
+        let id = new URL(url_string)
+        let paramValue = id.searchParams.get('logement')
+        const data = fullData.find((data) => data.id === paramValue)
 
+        setData(data)
+      } catch (err) {
+        setError(true)
+      }
+    }
+    fetchData()
+  })
+  return { data, error }
+}
 // export default Test
 
 // function Test(url) {
@@ -48,5 +47,3 @@ function Test() {
 
 //   return { data }
 // }
-
-export default Test
