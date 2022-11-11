@@ -6,10 +6,10 @@ function RatingScript() {
   const { isLoading, data, error } = useFetch(`data.json`)
 
   if (isLoading) {
-    return <h1>Chargement en cours</h1>
+    return
   }
   if (error) {
-    return <h1>Oups! Une erreur est survenue</h1>
+    return
   }
   // définition du nombre d'étoiles de la location en fonction des données
   // reçues, de 1 à 5

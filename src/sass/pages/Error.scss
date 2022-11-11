@@ -1,4 +1,5 @@
 @import '../abstracts/variables';
+@import '../utils/mixins';
 
 .error {
   margin-bottom: 60px;
@@ -8,8 +9,7 @@
     height: 263px;
     background-repeat: no-repeat;
     margin-top: 179px;
-    margin-left: auto;
-    margin-right: auto;
+    @include center;
     background-image: url('../../sass/images/404.png');
     @media only screen and (min-width: 2560px) and (max-width: 3480px) {
       width: 1080px;
@@ -41,8 +41,7 @@
       max-width: 260px;
       text-align: center;
       line-height: 142.6%;
-      margin-left: auto;
-      margin-right: auto;
+      @include center;
       br {
         display: block;
       }

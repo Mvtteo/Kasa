@@ -1,17 +1,29 @@
 @import '../abstracts/variables';
+@import '../utils/mixins';
 
 html {
   height: 100%;
   body {
     height: 100%;
     #root {
-      display: flex;
-      flex-direction: column;
+      @include column;
       height: 100%;
+      .error{
+        @include center;
+        margin-top: 150px;
+        font-size: 40px;
+        font-family: 'Montserrat';
+        font-weight: 900;
+        @media only screen and (min-width: 385px) and (max-width: 615px){
+          font-size: 25px;
+        }
+        @media only screen and (max-width: 384px){
+          font-size: 20px;
+        }
+      }
       .loader{
         flex-grow: 1;
-        margin-left: auto;
-        margin-right: auto;
+        @include center;
         margin-top: 250px;
         .lds-roller {
           display: inline-block;
@@ -199,8 +211,7 @@ html {
         }
 
         .page {
-          display: flex;
-          flex-direction: column;
+          @include column;
           width: auto;
           margin-left: $margin;
           margin-right: $margin;
@@ -226,8 +237,7 @@ html {
               flex-direction: column;
             }
             .head {
-              display: flex;
-              flex-direction: column;
+              @include column;
               h1 {
                 font-family: 'Montserrat';
                 font-style: normal;
@@ -309,8 +319,7 @@ html {
               }
             }
             .rightside {
-              display: flex;
-              flex-direction: column;
+              @include column;
               @media only screen and (max-width: 1024px) {
                 flex-direction: row-reverse;
                 justify-content: space-between;

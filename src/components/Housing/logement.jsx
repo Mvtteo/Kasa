@@ -8,10 +8,10 @@ function HousingDisplay() {
   const { isLoading, data, error } = useFetch(`data.json`)
 
   if (isLoading) {
-    return <h1>Chargement en cours</h1>
+    return
   }
   if (error) {
-    return <h1>Oups! Une erreur est survenue</h1>
+    return
   }
   return (
     <div className="page">
